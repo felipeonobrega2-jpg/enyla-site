@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ENYLA Gráfica — Offset · Digital · Embalagens</title>
+  <meta name="description" content="ENYLA imprime offset, digital e embalagens para marcas que preferem chamar atenção a passar batido. São Paulo - SP.">
+  <meta property="og:title" content="ENYLA Gráfica">
+  <meta property="og:description" content="Papel que grita, marca que fica.">
+  <meta property="og:image" content="/assets/enyla-logo-original.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Bricolage Grotesque', sans-serif;
+      background: #fbfaf7;
+      color: #171512;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Header ── */
+    header {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 48px;
+    }
+
+    header img { height: 30px; width: auto; display: block; }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    nav a {
+      color: #171512;
+      text-decoration: none;
+      transition: opacity .15s;
+    }
+    nav a:hover { opacity: .6; }
+
+    .btn-nav {
+      padding: 10px 22px;
+      background: #5009c5;
+      color: #fff;
+      border-radius: 100px;
+      font-weight: 700;
+      font-size: 13px;
+      text-decoration: none;
+      transition: opacity .15s;
+    }
+    .btn-nav:hover { opacity: .85; }
+
+    /* ── Hero ── */
+    #hero {
+      position: relative;
+      padding: 60px 48px 110px;
+      overflow: hidden;
+    }
+
+    .hero-shape-lime {
+      position: absolute;
+      top: 20px; right: 48px;
+      width: 280px; height: 280px;
+      background: #afe175;
+      border-radius: 24px;
+      transform: rotate(10deg);
+      z-index: 0;
+    }
+    .hero-shape-teal {
+      position: absolute;
+      top: 90px; right: 150px;
+      width: 220px; height: 220px;
+      background: #04d388;
+      border-radius: 50%;
+      opacity: .92;
+      z-index: 0;
+    }
+    .hero-shape-purple {
+      position: absolute;
+      top: 260px; right: 60px;
+      width: 160px; height: 160px;
+      background: #5009c5;
+      border-radius: 16px;
+      transform: rotate(-16deg);
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 680px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      padding: 7px 16px;
+      background: #171512;
+      color: #fff;
+      border-radius: 100px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 26px;
+    }
+
+    h1 {
+      font-weight: 800;
+      font-size: 80px;
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+
+    .hero-sub {
+      margin-top: 28px;
+      font-size: 18px;
+      line-height: 1.6;
+      font-weight: 400;
+      color: rgba(23,21,18,.75);
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      margin-top: 36px;
+    }
+
+    .btn-primary {
+      padding: 16px 30px;
+      background: #171512;
+      color: #fff;
+      border-radius: 100px;
+      font-weight: 700;
+      font-size: 15px;
+      text-decoration: none;
+      transition: opacity .15s;
+    }
+    .btn-primary:hover { opacity: .8; }
+
+    .btn-outline {
+      padding: 16px 30px;
+      border: 2px solid #171512;
+      border-radius: 100px;
+      font-weight: 700;
+      font-size: 15px;
+      text-decoration: none;
+      color: #171512;
+      transition: opacity .15s;
+    }
+    .btn-outline:hover { opacity: .6; }
+
+    /* ── Serviços ── */
+    #servicos {
+      padding: 20px 48px 90px;
+    }
+
+    #servicos h2 {
+      font-weight: 800;
+      font-size: 40px;
+      margin-bottom: 40px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      padding: 32px;
+      border-radius: 20px;
+    }
+    .card-offset  { background: #04d388; color: #fff;    transform: rotate(-2deg); }
+    .card-digital { background: #5009c5; color: #fff;    transform: rotate(1.5deg); }
+    .card-embal   { background: #afe175; color: #171512; transform: rotate(-1.5deg); }
+
+    .card-title {
+      font-weight: 800;
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+    .card-body {
+      font-size: 14.5px;
+      line-height: 1.55;
+    }
+
+    /* ── Manifesto ── */
+    #manifesto {
+      position: relative;
+      padding: 90px 48px;
+      background: #171512;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .manifesto-shape-purple {
+      position: absolute;
+      bottom: -80px; left: -40px;
+      width: 260px; height: 260px;
+      background: #5009c5;
+      border-radius: 50%;
+      opacity: .35;
+    }
+    .manifesto-shape-teal {
+      position: absolute;
+      top: -60px; right: 80px;
+      width: 200px; height: 200px;
+      background: #04d388;
+      border-radius: 24px;
+      opacity: .3;
+      transform: rotate(20deg);
+    }
+
+    .manifesto-quote {
+      position: relative;
+      z-index: 2;
+      max-width: 880px;
+      font-weight: 800;
+      font-size: 42px;
+      line-height: 1.25;
+    }
+    .manifesto-attr {
+      position: relative;
+      z-index: 2;
+      margin-top: 24px;
+      font-size: 14px;
+      font-weight: 600;
+      color: rgba(255,255,255,.55);
+    }
+
+    /* ── CTA ── */
+    #contato {
+      padding: 80px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    #contato h3 {
+      font-weight: 800;
+      font-size: 44px;
+      line-height: 1.15;
+      max-width: 600px;
+    }
+
+    .cta-right {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      min-width: 280px;
+    }
+
+    .btn-cta {
+      padding: 18px 30px;
+      background: #5009c5;
+      color: #fff;
+      border-radius: 100px;
+      font-weight: 700;
+      font-size: 15px;
+      text-align: center;
+      text-decoration: none;
+      transition: opacity .15s;
+    }
+    .btn-cta:hover { opacity: .85; }
+
+    .cta-contact {
+      font-size: 14px;
+      color: rgba(23,21,18,.65);
+      text-align: center;
+    }
+
+    /* ── Footer ── */
+    footer {
+      padding: 26px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 13px;
+      color: rgba(23,21,18,.55);
+      border-top: 2px solid rgba(23,21,18,.08);
+    }
+    footer img { height: 18px; width: auto; display: block; }
+    footer span { text-align: right; line-height: 1.6; }
+
+    /* ── Responsivo ── */
+    @media (max-width: 768px) {
+      header { padding: 20px 24px; }
+      nav { gap: 16px; }
+      nav a { display: none; }
+
+      #hero { padding: 40px 24px 200px; }
+      .hero-shape-lime  { width: 180px; height: 180px; right: 12px; top: 60px; }
+      .hero-shape-teal  { width: 140px; height: 140px; right: 80px; top: 110px; }
+      .hero-shape-purple{ width: 100px; height: 100px; right: 20px; top: 210px; }
+      h1 { font-size: 44px; }
+      .hero-buttons { flex-direction: column; }
+      .btn-primary, .btn-outline { text-align: center; }
+
+      #servicos { padding: 20px 24px 60px; }
+      .cards { grid-template-columns: 1fr; gap: 20px; }
+      .card { transform: none !important; }
+
+      #manifesto { padding: 60px 24px; }
+      .manifesto-quote { font-size: 28px; }
+
+      #contato { padding: 60px 24px; flex-direction: column; align-items: flex-start; }
+      #contato h3 { font-size: 32px; }
+      .cta-right { width: 100%; }
+
+      footer { padding: 20px 24px; flex-direction: column; gap: 12px; text-align: center; }
+      footer span { text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <a href="/"><img src="assets/enyla-logo-cropped.png" alt="ENYLA"></a>
+    <nav>
+      <a href="#servicos">Serviços</a>
+      <a href="#manifesto">Processo</a>
+      <a href="#contato">Contato</a>
+      <a href="https://wa.me/5511999042987?text=Olá%2C%20gostaria%20de%20solicitar%20um%20orçamento." class="btn-nav">Orçamento</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero">
+    <div class="hero-shape-lime"></div>
+    <div class="hero-shape-teal"></div>
+    <div class="hero-shape-purple"></div>
+    <div class="hero-content">
+      <div class="eyebrow">IMPRESSO PRA CAUSAR</div>
+      <h1>Papel que grita, marca que fica.</h1>
+      <p class="hero-sub">ENYLA imprime offset, digital e embalagens para marcas que preferem chamar atenção a passar batido.</p>
+      <div class="hero-buttons">
+        <a href="https://wa.me/5511999042987?text=Olá%2C%20gostaria%20de%20solicitar%20um%20orçamento." class="btn-primary">Pedir orçamento</a>
+        <a href="#servicos" class="btn-outline">Ver serviços</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Serviços -->
+  <section id="servicos">
+    <h2>O que a gente faz</h2>
+    <div class="cards">
+      <div class="card card-offset">
+        <div class="card-title">Offset</div>
+        <div class="card-body">Grandes tiragens, cor fechada, precisão industrial do começo ao fim.</div>
+      </div>
+      <div class="card card-digital">
+        <div class="card-title">Digital</div>
+        <div class="card-body">Tiragem curta, personalização real e virada rápida quando o prazo aperta.</div>
+      </div>
+      <div class="card card-embal">
+        <div class="card-title">Embalagens</div>
+        <div class="card-body">Estrutura, faca especial e acabamento que faz o produto vender sozinho.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Manifesto -->
+  <section id="manifesto">
+    <div class="manifesto-shape-purple"></div>
+    <div class="manifesto-shape-teal"></div>
+    <p class="manifesto-quote">"Não fazemos só imprimir. Fazemos a marca sair do arquivo e virar objeto que alguém segura na mão."</p>
+    <div class="manifesto-attr">— Princípio nº 1 da ENYLA</div>
+  </section>
+
+  <!-- CTA -->
+  <section id="contato">
+    <h3>Vamos imprimir algo que ninguém vai ignorar.</h3>
+    <div class="cta-right">
+      <a href="https://wa.me/5511999042987?text=Olá%2C%20gostaria%20de%20solicitar%20um%20orçamento." class="btn-cta">Falar com a ENYLA</a>
+      <div class="cta-contact">contato@enyla.com.br · (11) 99904-2987</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <img src="assets/enyla-logo-cropped.png" alt="ENYLA">
+    <span>Av. Celso Garcia, 928 - Brás, São Paulo - SP, 03014-000<br>© 2026 ENYLA Gráfica — Offset · Digital · Embalagens</span>
+  </footer>
+
+</body>
+</html>
