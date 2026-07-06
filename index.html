@@ -3,11 +3,86 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ENYLA Gráfica — Offset · Digital · Embalagens</title>
-  <meta name="description" content="ENYLA imprime offset, digital e embalagens para marcas que preferem chamar atenção a passar batido. São Paulo - SP.">
-  <meta property="og:title" content="ENYLA Gráfica">
-  <meta property="og:description" content="Papel que grita, marca que fica.">
-  <meta property="og:image" content="/assets/enyla-logo-original.png">
+
+  <!-- Primary SEO -->
+  <title>ENYLA Gráfica | Impressão Offset, Digital e Embalagens em São Paulo</title>
+  <meta name="description" content="Gráfica em São Paulo especializada em impressão offset, digital e embalagens personalizadas. Tiragens curtas ou grandes volumes com qualidade industrial. Orçamento pelo WhatsApp.">
+  <meta name="keywords" content="gráfica São Paulo, impressão offset São Paulo, impressão digital São Paulo, embalagens personalizadas, gráfica Brás, gráfica orçamento, ENYLA gráfica">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://www.enyla.com.br/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.enyla.com.br/">
+  <meta property="og:site_name" content="ENYLA Gráfica">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="ENYLA Gráfica | Offset, Digital e Embalagens — São Paulo">
+  <meta property="og:description" content="Gráfica em São Paulo especializada em impressão offset, digital e embalagens personalizadas. Qualidade industrial, entrega rápida.">
+  <meta property="og:image" content="https://www.enyla.com.br/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="ENYLA Gráfica — Offset, Digital e Embalagens">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ENYLA Gráfica | Offset, Digital e Embalagens — São Paulo">
+  <meta name="twitter:description" content="Gráfica em São Paulo especializada em impressão offset, digital e embalagens personalizadas.">
+  <meta name="twitter:image" content="https://www.enyla.com.br/assets/og-image.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/enyla-logo-cropped.png">
+  <meta name="theme-color" content="#5009c5">
+
+  <!-- Schema.org: PrintShop LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "PrintShop",
+    "name": "ENYLA Gráfica",
+    "description": "Gráfica especializada em impressão offset, digital e embalagens personalizadas em São Paulo.",
+    "url": "https://www.enyla.com.br",
+    "logo": "https://www.enyla.com.br/assets/enyla-logo-cropped.png",
+    "image": "https://www.enyla.com.br/assets/og-image.png",
+    "telephone": "+55-11-99904-2987",
+    "email": "contato@enyla.com.br",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Celso Garcia, 928",
+      "addressLocality": "São Paulo",
+      "addressRegion": "SP",
+      "postalCode": "03014-000",
+      "addressCountry": "BR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -23.5426,
+      "longitude": -46.6006
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "São Paulo"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Serviços de Impressão",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Impressão Offset" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Impressão Digital" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Embalagens Personalizadas" } }
+      ]
+    },
+    "priceRange": "$$",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+55-11-99904-2987",
+      "contactType": "sales",
+      "availableLanguage": "Portuguese"
+    }
+  }
+  </script>
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
@@ -338,8 +413,9 @@
     </nav>
   </header>
 
+  <main>
   <!-- Hero -->
-  <section id="hero">
+  <section id="hero" aria-label="Apresentação">
     <div class="hero-shape-lime"></div>
     <div class="hero-shape-teal"></div>
     <div class="hero-shape-purple"></div>
@@ -355,7 +431,7 @@
   </section>
 
   <!-- Serviços -->
-  <section id="servicos">
+  <section id="servicos" aria-label="Serviços">
     <h2>O que a gente faz</h2>
     <div class="cards">
       <div class="card card-offset">
@@ -374,7 +450,7 @@
   </section>
 
   <!-- Manifesto -->
-  <section id="manifesto">
+  <section id="manifesto" aria-label="Nossa filosofia">
     <div class="manifesto-shape-purple"></div>
     <div class="manifesto-shape-teal"></div>
     <p class="manifesto-quote">"Não fazemos só imprimir. Fazemos a marca sair do arquivo e virar objeto que alguém segura na mão."</p>
@@ -382,7 +458,7 @@
   </section>
 
   <!-- CTA -->
-  <section id="contato">
+  <section id="contato" aria-label="Contato">
     <h3>Vamos imprimir algo que ninguém vai ignorar.</h3>
     <div class="cta-right">
       <a href="https://wa.me/5511999042987?text=Olá%2C%20gostaria%20de%20solicitar%20um%20orçamento." class="btn-cta">Falar com a ENYLA</a>
@@ -390,6 +466,7 @@
     </div>
   </section>
 
+  </main>
   <!-- Footer -->
   <footer>
     <img src="assets/enyla-logo-cropped.png" alt="ENYLA">
